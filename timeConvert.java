@@ -15,5 +15,5 @@ public class timeConvert{
 
 		System.out.print("converted time is " + hour + "hour " + minute +"minute " + sec + "second");
 		sc.close();
-	}	
+	}
 }
