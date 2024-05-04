@@ -1,5 +1,5 @@
 // 3. WAP to convert seconds into standard time format hh mm ss in notepad
-test
+
 import java.util.Scanner;
 public class timeConvert{
 	public static void main(String args[]) {
