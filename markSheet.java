@@ -29,6 +29,6 @@ public class markSheet {
 		
 	System.out.println("sum = " + sum + " percentage = " + percentage);
 	sc.close();
- 	
-	}	
+
+	}
 }

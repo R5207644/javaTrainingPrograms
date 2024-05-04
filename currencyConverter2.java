@@ -14,6 +14,6 @@ public class currencyConverter2 {
 		dollar = rupees / 83.2345f;
 
 		System.out.print("In Rupee = " + dollar);
-		
+		sc.close();
 		}
 }
