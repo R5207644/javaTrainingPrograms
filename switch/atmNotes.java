@@ -76,5 +76,6 @@ public class atmNotes {
         System.out.println("rest ammount = " +(ammount));
         break;
     }
+    sc.close();
   }
 }

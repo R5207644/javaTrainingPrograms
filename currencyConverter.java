@@ -1,7 +1,7 @@
 // 2. WAP tp convert dollar into rupees
 
 import java.util.Scanner;
-public class currencyConverter {
+class currencyConverter {
 	public static void main( String args[] ) {
 
 		Scanner sc = new Scanner(System.in);

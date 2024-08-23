@@ -10,6 +10,7 @@ public class Series {
     System.out.print("Enter n = ");
     n = sc.nextInt();
     System.out.println();
+    sc.close();
     
     do {
       System.out.print(i * 2 +" ");

@@ -21,5 +21,6 @@ public class fabnocciSeries{
       a = b;
       b = c;
     }
+    sc.close();
   }
 }

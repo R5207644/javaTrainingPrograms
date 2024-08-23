@@ -34,5 +34,6 @@ public class comparison{
         }
         break;
     }
+    sc.close();
   }
 }

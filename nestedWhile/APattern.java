@@ -41,5 +41,6 @@ public class APattern {
       i++;
       System.out.println();
     }
+    sc.close();
   }
 }

@@ -34,5 +34,6 @@ public class KPattern {
       j = 1;
       System.out.println();
     }
+    sc.close();
   }
 }

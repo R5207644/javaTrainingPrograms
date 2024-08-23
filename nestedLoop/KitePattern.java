@@ -2,10 +2,10 @@
 
 import java.util.Scanner;
 
-public class KitePattern {
+class KitePattern {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
-    int n, i, j, k;
+    int n, i, j;
     
     System.out.print("enter n = ");
     n = sc.nextInt();
