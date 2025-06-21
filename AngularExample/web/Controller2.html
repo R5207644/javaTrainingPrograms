@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="static/angular.min.js" type="text/javascript"></script>
+        <script>
+            var app = angular.module('geeks', []);
+            app.controller('p', function($scope){
+                $scope.fullName = function() {
+                    return $scope.fname+ "" + $scope.lname;
+                };
+            });
+        </script>
+    </head>
+    <body ng-app="geeks" ng-controller="p">
+        <p>Fisrt name :: <input type="text" ng-model="fname"></p>
+        <p>Last name :: <input type="text" ng-model="lname"></p>
+        <p>Full Name :: {{ fullName() }}</p>
+    </body>
+</html>

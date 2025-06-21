@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="static/angular.min.js" type="text/javascript"></script>
+    </head>
+    <body ng-app="">
+        <!--        <p>Enter Your Name <input type="text" ng-model="uName"></p>
+                <h2>Welcome, {{ uName }}</h2>-->
+
+        <!--        <p>a: <input type="number" ng-model="a"></p>
+                <p>b: <input type="number" ng-model="b"></p>
+                <p>C: {{ a + b }}</p>-->
+
+        <!--        <h1>Simple interest calculator</h1>
+                <p>Principle Ammount <input type="number" ng-model="p"></p>
+                <p>Rate of interest <input type="number" ng-model="r"></p>
+                <p>Time <input type="number" ng-model="t"></p>
+                <p>Simple Interest {{ (p * r * t) / 100}}</p>
+                
+                <h1>Currency Convertor</h1>
+                <p>Enter Currency In Rupees <input type="number" ng-model="rupee"></p>
+                <p>In Dollar {{ rupee / 88.06 }}</p>
+                
+                <h1>Checking for greater number</h1>
+                <p>a: <input type="number" ng-model="a"></p>
+                <p>b: <input type="number" ng-model="b"></p>
+                <p ng-if="a > b">{{ a }} is greater {{ b }}</p>
+                <p ng-if="b > a">{{ b }} is greater {{ a }}</p>
+                <p ng-if="a===b">Equal</p>-->
+
+        <!--        <h1>Checking age to vote</h1>
+                <p>age: <input type="number" ng-model="age"></p>
+                <p ng-if="age >= 18">Congratulations You are eligible to vote</p>
+                <h2 ng-if="age < 18">Sorry currently you are not eligible to vote but <br> You can vote after {{ 18 - age }} years</h2>-->
+
+        <h1>Profit loss</h1>
+        <p>Buy price <input type="number" ng-model="buy"></p>
+        <p>Sell price <input type="number" ng-model="sell"></p>
+        <h2 ng-if="buy > sell">You Have loss of {{ buy - sell }} Bucks</h2>
+        <h2 ng-if="buy < sell">You Have Profit of {{ sell - buy }} Bucks</h2>
+    </body>
+</html>

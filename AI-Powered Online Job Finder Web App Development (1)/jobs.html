@@ -1,0 +1,177 @@
+<!-- Jobs Page Template -->
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h2><i class="fas fa-briefcase me-2 text-primary"></i>Job Matches</h2>
+            <p class="lead">Find job listings where you would be a top applicant based on your skills and experience.</p>
+        </div>
+    </div>
+    
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Search Jobs</h5>
+                </div>
+                <div class="card-body">
+                    <form ng-submit="searchJobs()">
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <label for="searchQuery" class="form-label">Job Title or Keywords</label>
+                                <input type="text" class="form-control" id="searchQuery" 
+                                       placeholder="e.g., Java Developer" 
+                                       ng-model="jobs.searchQuery">
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="searchLocation" class="form-label">Location</label>
+                                <input type="text" class="form-control" id="searchLocation" 
+                                       placeholder="e.g., Remote, New York" 
+                                       ng-model="jobs.searchLocation">
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label">Action</label>
+                                <div>
+                                    <button type="submit" class="btn btn-primary w-100">
+                                        <i class="fas fa-search me-2"></i>Search Jobs
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card mb-4">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0">Filter Results</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label class="form-label">Job Platforms</label>
+                        <div class="form-check" ng-repeat="platform in jobs.platforms">
+                            <input class="form-check-input" type="checkbox" id="platform{{$index}}" checked>
+                            <label class="form-check-label" for="platform{{$index}}">
+                                {{platform}}
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Match Score</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="score90" checked>
+                            <label class="form-check-label" for="score90">
+                                90% and above
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="score80" checked>
+                            <label class="form-check-label" for="score80">
+                                80% - 89%
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="score70" checked>
+                            <label class="form-check-label" for="score70">
+                                70% - 79%
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="score60" checked>
+                            <label class="form-check-label" for="score60">
+                                60% - 69%
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Job Type</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="fullTime" checked>
+                            <label class="form-check-label" for="fullTime">
+                                Full-time
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="partTime" checked>
+                            <label class="form-check-label" for="partTime">
+                                Part-time
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="contract" checked>
+                            <label class="form-check-label" for="contract">
+                                Contract
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-outline-primary w-100">
+                        <i class="fas fa-filter me-2"></i>Apply Filters
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-9">
+            <div class="card mb-4">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0">Top Job Matches</h5>
+                </div>
+                <div class="card-body p-0">
+                    <div class="alert alert-info m-3" ng-if="jobs.matches.length === 0">
+                        <i class="fas fa-info-circle me-2"></i>Click "Get Job Matches" to find jobs that match your skills and experience.
+                    </div>
+                    
+                    <div class="list-group list-group-flush" ng-if="jobs.matches.length > 0">
+                        <div class="list-group-item" ng-repeat="job in jobs.matches">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="mb-0">{{job.title}}</h5>
+                                <span class="badge bg-success">{{job.matchScore}}% Match</span>
+                            </div>
+                            <div class="mb-2">
+                                <span class="text-muted">
+                                    <i class="fas fa-building me-1"></i>{{job.company}} | 
+                                    <i class="fas fa-map-marker-alt me-1"></i>{{job.location}} | 
+                                    <i class="fas fa-clock me-1"></i>{{job.jobType}}
+                                </span>
+                            </div>
+                            <p class="mb-2">{{job.description | limitTo: 200}}...</p>
+                            <div class="mb-2">
+                                <span class="badge bg-light text-dark me-1 mb-1" ng-repeat="skill in job.requirements.split(',').slice(0, 5)">
+                                    {{skill.trim()}}
+                                </span>
+                                <span class="badge bg-light text-dark me-1 mb-1" ng-if="job.requirements.split(',').length > 5">
+                                    +{{job.requirements.split(',').length - 5}} more
+                                </span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fas fa-globe me-1"></i>{{job.sourcePlatform}} | 
+                                    <i class="fas fa-calendar-alt me-1"></i>Posted: {{job.postedDate}}
+                                </small>
+                                <div>
+                                    <a href="{{job.sourceUrl}}" target="_blank" class="btn btn-sm btn-outline-primary me-2">
+                                        <i class="fas fa-external-link-alt me-1"></i>View
+                                    </a>
+                                    <button class="btn btn-sm btn-outline-success">
+                                        <i class="fas fa-bookmark me-1"></i>Save
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-center" ng-if="jobs.matches.length === 0">
+                    <button class="btn btn-primary" ng-click="getJobMatches()">
+                        <i class="fas fa-search me-2"></i>Get Job Matches
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

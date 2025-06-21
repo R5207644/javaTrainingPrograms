@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="Calculator.jsp">
+            <p>First Number</p>
+            <p><input type="number" name="num1" id="num1"></p>
+            <p>Second Number</p>
+            <p><input type="number" name="num2" id="num2"></p>
+            <p>
+                <select name="op">
+                    <option selected>  Select operation</option>
+                    <option value="sum">sum</option>
+                    <option value="sub">sub</option>
+                    <option value="div">divide</option>
+                    <option value="mul">multiply</option>
+                </select>
+            </p>
+            <p><input type="submit" value="submit"><input type="button" value="clear" onclick="clr()"></p>
+        </form>
+    </body>
+    <script>
+        function clr() {
+            document.getElementById("num1").value="";
+            document.getElementById("num2").value="";
+        }
+    </script>
+</html>

@@ -1,0 +1,22 @@
+import java.util.Scanner;
+class ArrayExample
+{
+	public static void main(String[] args)
+	{
+		int[] num = new int[5];
+		int i;
+
+		Scanner sc = new Scanner(System.in);	
+		System.out.println("Enter Array Elements");
+
+		for(i = 0; i< 5; i++){
+ 			num[i] = sc.nextInt();
+		}
+		System.out.println("list of array elements");
+
+		for(i = 0; i < 5; i++) {
+			System.out.println(num[i]);
+		}
+
+	}
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/angular.min.js" type="text/javascript"></script>
+    </head>
+    <body ng-app="">
+        <form action="action">
+            Select Your course
+            <input type="radio" ng-model="myVar" value="java">java
+            <input type="radio" ng-model="myVar" value="php">PHP
+            <input type="radio" ng-model="myVar" value="python">python
+        </form>
+        <div ng-if="myVar">
+            <div ng-switch="myVar">
+                <div ng-switch-when="java">
+                    <h1>Course: java</h1>
+                    <hr>
+                    <h2>Duration: 6month</h2>
+                    <h2>Fee: 15000</h2>
+                </div>
+                <div ng-switch-when="php">
+                    <h1>Course: php</h1>
+                    <hr>
+                    <h2>Duration: 6month</h2>
+                    <h2>Fee: 15000</h2>
+                </div>
+                <div ng-switch-when="python">
+                    <h1>Course: python</h1>
+                    <hr>
+                    <h2>Duration: 6month</h2>
+                    <h2>Fee: 15000</h2>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

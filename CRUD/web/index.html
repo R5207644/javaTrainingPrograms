@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Register</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="static/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <style>
+            .box{
+                width: 800px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Read.jsp">Read</a>
+            <a href="Search.jsp">Search</a>
+        </nav>
+        <div class="box">
+            <form action="connection.jsp" method="POST" class="container">
+                <table width="800" class="table">
+                    <tr>
+                        <td>Name: </td>
+                        <td><input type="text" name="name"></td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td>
+                            <input type="radio" name="gender" value="male"> male
+                            <input type="radio" name="gender" value="female"> female
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Course</td>
+                        <td>
+                            <select name="course">
+                                <option value="BCA">BCA</option>
+                                <option value="BSC">BSC</option>
+                                <option value="BA">BA</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Username</td>
+                        <td><input type="text" name="uname"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="text" name="passwd"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Submit" class="btn-primary"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

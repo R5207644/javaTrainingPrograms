@@ -1,0 +1,47 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 16 Apr 2025, 5:46:56 pm
+    Author     : Sarvesh Kumar
+*/
+
+:root {
+    --first-color: #ff0b55;
+    --second-color: #ffdede;
+    --third-color: #cf0f47;
+    --fourth-color: #000000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*home*/
+.kg-home-col-7 img{
+    height: 400px;
+}
+.kg-row-home-top {
+    align-items: center;
+    padding: 0 5%;
+}
+.home-header-box{
+    padding: 0 5%;
+} 
+hr {
+    background-color: var(--second-color);
+}
+.kg-row-home {
+    margin-top: 5px;
+    border: 1px solid var(--second-color);
+}
+
+/*Admin Page*/
+.admin-form {
+    width: 60vw;
+}
+
+/*Dashboard page*/
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Controller </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="static/angular.min.js" type="text/javascript"></script>
+        <script>
+            app = angular.module('myData', []);
+            app.controller('p', function($scope)
+            {
+                $scope.fName = "Sarvesh",
+                $scope.lName = "kumar";
+                $scope.fullName=function() {
+                    return $scope.fName + "" + $scope.lName;
+                };
+            }
+                    );
+        </script>
+
+    </head>
+    <body ng-app="myData" ng-controller="p">
+        <p>First Name:: <input type="text" ng-model="fName"></p>
+        <p>First Name:: <input type="text" ng-model="lName"></p>
+
+        <p>You are Entering {{ fullName()}}</p>
+        
+        <script src="static/angular.min.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,18 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 11 Mar 2025, 10:30:34 am
+    Author     : Sarvesh Kumar
+*/
+
+.form-box {
+                width: 300px;
+                height: 60vh;
+                padding-top: 30px;
+                margin-top: 40px;
+                box-shadow: 5px 5px 5px #111;
+                border-radius: 25px;
+            }
+

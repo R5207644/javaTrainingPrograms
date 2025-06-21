@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>My Form</h1>
+        <form action="myservlet" method="POST">
+            <p>Name: <input type="text" name="uname"></p>
+            <p>Password: <input type="password" name="passwd"></p>
+            <p>
+                Gender: <input type="radio" value="Male" name="gender">Male
+                <input type="radio" value="female" name="gender">Female
+            </p>
+            <p>
+                Select Your course: <select name="course">
+                    <option value="java">java</option>
+                    <option value="c">c</option>
+                    <option value="c++">C++</option>
+                </select>
+            </p>
+            <p><input type="checkbox" value="checked" name="condition">I Agree to terms.</p>
+            <p><input type="submit" value="register"><input type="reset" value="reset"></p>
+        </form>
+    </body>
+</html>
